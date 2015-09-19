@@ -126,33 +126,67 @@ insectivory
 \item<4-> Automatic and semi-automatic sensing devices can be utilised
 \item<5-> Large volume of data captured by these devices
 \item<6-> Algorithms to analyse this data would be useful to ecologists
+\item<7-> Our campus location in the lower Himalays: sensitive ecosystem
+\item<8-> Proposed system can be used for long-term ecological monitoring
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{The challenges}
 \begin{itemize}
-\item<2-> 
-\item<3-> Avian diversity: good indicator of ecosystem health in a local area
-\item<4-> Automatic and semi-automatic sensing devices can be utilised
-\item<5-> Large volume of data captured by these devices
-\item<6-> Algorithms to analyse this data would be useful to ecologists
+\item<2-> Challenges at various levels
+\item<3-> Acoustics:
+	\begin{itemize}
+	\item<4-> Complex acoustic environment where recordings are made
+	\item<5-> Overlapping vocalisations, intra-species call variability
+	\item<7-> Background sounds (other animals, human-made sounds, river etc.)
+	\end{itemize}
+\item<8-> Image/video 
+	\begin{itemize}
+	\item<9-> Fine-grained visual classification
+	\item<10-> Overlapping vocalisation, intra-species call variability
+	\item<11-> Background sounds (other animals, human-made sounds, river etc.)
+	\end{itemize}
+\item<12-> Fusion of modalities
+	\begin{itemize}
+	\item<13-> Curating of feature vectors and subsystem decisions 
+	\item<14-> Complementary representations from different modalities
+	\end{itemize}
+\item<15-> Machine-learning
+	\begin{itemize}
+	\item<16-> Fixed-length representations
+	\item<17-> Bag-of-features
+	\end{itemize}
 \end{itemize}
 \end{frame}
-
-
-
 
 \begin{frame}
-\frametitle{Speech activity detection (SAD)}
-\begin{figure}[t12]
-\centering
-\includegraphics[width=10cm,height=6cm]{figures/vad_miss_fa.eps}
-\end{figure}
+\frametitle{The acoustics}
 \begin{itemize}
-	\item SAD is challenging in noisy conditions
+\item<2-> Automatic analysis of birdcalls: fairly active research area
+\item<3-> Processing of human speech: techniques can be adapted for birdcalls
+\item<4-> Production mechanims are different, but have similarities (eg. formant
+structure)
+\item<5-> Existing techniques include:
+\begin{itemize}
+	\item spectral representations \footnote{
+	H. Tyagi et. al., ``Automatic identification of bird calls using spectral 
+	ensemble average voice prints'', Proc. EUSIPCO, 2006},
+	\item Mel frequency cepstra \footnote{M. Graciarena et. al., 
+	``Acoustic front-end optimization for bird species recognition'', 
+	Proc. ICASSP, 2010}, 
+	\item hidden Markov models \footnote{M. Graciarena et.al., 
+	``Bird species recognition combining acoustic and sequence modeling'', 
+	Proc. ICASSP, 2011}, 
+	\item sparse representations \footnote{L. N. Tan et. al. 
+	``Evaluation of a sparse representation-based classifier for bird phrase 
+	classification", Proc. Interspeech, 2012}
+\end{itemize}
 \end{itemize}
 \end{frame}
+
+
+
 
 
 
