@@ -100,7 +100,7 @@ School of Computing and Electrical Engineering\\
 The objective\\
 The acoustics\\
 The image/video\\
-This machine learning\\
+The machine learning\\
 The budget and other details\\
 \end{frame}
 
@@ -159,14 +159,32 @@ insectivory
 \end{itemize}
 \end{frame}
 
+
 \begin{frame}
 \frametitle{The acoustics}
+\vspace{-1cm}
+Automatic analysis of birdcalls: fairly active research area\\
+\vspace{0.3cm}
+\pause
+Data acquisition: rugged, field-deployable recorders \\
+eg.~Song Meter SM3 recorder from Wildlife Acoustics Inc, USA.
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\centering
+	\only<2>{\includegraphics[width=0.3\textwidth]{figures/songMeter.png}}
+	%\caption{\small{Song Meter SM3 recorder}}
+\end{wrapfigure}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{The acoustics (cont'd)}
 \begin{itemize}
-\item<2-> Automatic analysis of birdcalls: fairly active research area
-\item<3-> Processing of human speech: techniques can be adapted for birdcalls
-\item<4-> Production mechanims are different, but have similarities (eg. formant
+\item<2-> Processing of human speech: techniques can be adapted for birdcalls
+\item<3-> Production mechanims are different, but have similarities (eg. formant
 structure)
-\item<5-> Existing techniques include:
+\item<4-> Existing techniques include:
 \begin{itemize}
 	\item spectral representations \footnote{
 	H. Tyagi et. al., ``Automatic identification of bird calls using spectral 
@@ -183,6 +201,26 @@ structure)
 \end{itemize}
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+\frametitle{The acoustics (cont'd)}
+\begin{itemize}
+\item<2-> Research focus: \textcolor{blue}{subspace representations} 
+\item<3-> A recording can be represented as a fixed-length vector $\mathbf{x}$ 
+\item<4-> Can be used for various applications, for eg. removing background
+sounds before classification:
+\begin{itemize}
+	\item<5-> Project $\mathbf{x}$ into a subspace of background sounds, and remove this
+	component from $\mathbf{x}$
+\end{itemize}
+\item <6-> Fixed-length representations: utilised in kernel functions for
+support vector machines
+\end{itemize}
+\end{frame}
+
+
+
+
 
 
 \begin{frame}
@@ -236,6 +274,36 @@ structure)
 \end{frame}
 
 
+\begin{frame}
+\frametitle{Budget and other details}
+
+\begin{table}[th]
+\centering
+\caption{Projected expenses in lakhs INR.}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Items & Year 1 & Year 2 & Year 3 & Total\\
+\hline
+High-end computers (2) & 3.0 & 3.0 & 0 & 6.0\\
+Imaging and audio equipment & 5.0 & 3.0 & 0 & 8.0 \\
+Desktop computers (6) & 5.0 & 0 & 0 & 5.0  \\
+Contingency & 0.5 & 0.5 & 1.0 & 2.0 \\
+Travel & 0.5 & 0.5 & 1.0 & 2.0\\
+\hline
+Overall & 15.0 & 8.0 & 2.0 & \textbf{23.0} \\
+\hline
+\end{tabular}
+\label{tab:funding}
+\end{table}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Future plans}
+\begin{itemize}
+\item \textbf{Further funding:} Proposal to SERB (ready for submission)
+\end{itemize}
+\end{frame}
 
 
 \begin{frame}
