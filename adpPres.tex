@@ -142,14 +142,15 @@ insectivory
 	\end{itemize}
 \item<8-> Image/video 
 	\begin{itemize}
-	\item<9-> Fine-grained visual classification
-	\item<10-> Overlapping vocalisation, intra-species call variability
-	\item<11-> Background sounds (other animals, human-made sounds, river etc.)
+	\item<9-> Complex visual environment, visual background clutter
+	\item<10-> Overlapping inter-class visual appearances, local variations  
+	\item<11-> Intra-class variations: Robustness to changes in pose, motion, light conditions.
 	\end{itemize}
 \item<12-> Fusion of modalities
 	\begin{itemize}
 	\item<13-> Curating of feature vectors and subsystem decisions 
 	\item<14-> Complementary representations from different modalities
+	\item<15-> Correlating sound and videos
 	\end{itemize}
 \item<15-> Machine-learning
 	\begin{itemize}
@@ -176,8 +177,6 @@ eg.~Song Meter SM3 recorder from Wildlife Acoustics Inc, USA.
 \end{frame}
 
 
-
-
 \begin{frame}
 \frametitle{The acoustics (cont'd)}
 \begin{itemize}
@@ -202,6 +201,7 @@ structure)
 \end{itemize}
 \end{frame}
 
+
 \begin{frame}
 \frametitle{The acoustics (cont'd)}
 \begin{itemize}
@@ -219,41 +219,76 @@ support vector machines
 \end{frame}
 
 
-
-
+\begin{frame}
+\frametitle{The visual: Research areas}
+\begin{itemize}
+\item<2-> Fine-grained classification (of birds): Relatively recent research area ($\geq$ 2010)
+\item<3-> Detection, segmentation and tracking of birds (relatively unexplored): \\Adapting general object detection, segmentation and tracking methods.
+\item<4-> Learning visual guidance: Inverse problem to classification \\$\Rightarrow$ Given the classes, find the discriminative features
+\item<5-> Sound source localization (active area in general domains): \\Challenges for birds: less visual motion, background sounds
+\end{itemize}
+\end{frame}
 
 
 \begin{frame}
-\frametitle{The visual}
+\footnotesize
+\frametitle{The visual: Existing work}
 \begin{itemize}
-\item<2-> Automatic detection of birds: fairly active research area
-\item<3-> Bird classification: techniques can be adapted for birdcalls
-\item<4-> Production mechanims are different, but have similarities (eg. formant
-structure)
-\item<5-> Existing techniques include:
+	\item<2-> Fine-grained classification 
+	\begin{itemize}
+	\footnotesize
+	\item H. Tyagi et. al., ``Automatic identification of bird calls using spectral 
+	ensemble average voice prints'', Proc. EUSIPCO, 2006,
+	\item M. Graciarena et. al., ``Acoustic front-end optimization for bird species recognition'', 
+	Proc. ICASSP, 2010, 
+	\item M. Graciarena et.al., ``Bird species recognition combining acoustic and sequence modeling'', 
+	Proc. ICASSP, 2011, 
+	\end{itemize}	
+	\item<3-> Visual guidance: 
+	\item<4-> Detection, Segmentation
+	\begin{itemize}
+	\footnotesize
+	\item H. Tyagi et. al., ``Automatic identification of bird calls using spectral 
+	ensemble average voice prints'', Proc. EUSIPCO, 2006,
+	\item M. Graciarena et. al., ``Acoustic front-end optimization for bird species recognition'', 
+	Proc. ICASSP, 2010, 
+	\item M. Graciarena et.al., ``Bird species recognition combining acoustic and sequence modeling'', 
+	Proc. ICASSP, 2011, 
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{The visual: Possible directions}
 \begin{itemize}
-	\item spectral representations \footnote{
-	H. Tyagi et. al., ``Automatic identification of bird calls using spectral 
-	ensemble average voice prints'', Proc. EUSIPCO, 2006},
-	\item Mel frequency cepstra \footnote{M. Graciarena et. al., 
-	``Acoustic front-end optimization for bird species recognition'', 
-	Proc. ICASSP, 2010}, 
-	\item hidden Markov models \footnote{M. Graciarena et.al., 
-	``Bird species recognition combining acoustic and sequence modeling'', 
-	Proc. ICASSP, 2011}, 
-	\item sparse representations \footnote{L. N. Tan et. al. 
-	``Evaluation of a sparse representation-based classifier for bird phrase 
-	classification", Proc. Interspeech, 2012}
+\item<2-> Features and frameworks: 
+\begin{itemize}
+\item Patch-based features 
+\item Body-part features: Appearance and Geometric relationships
+\item Feature learning: Deep neural networks, Discriminative features
+\end{itemize}
+\item<3-> Frameworks:
+\begin{itemize}
+\item Sparse representation
+\item Markov Random Fields
+\item Hierarchical classification 
+\end{itemize}
+\item<4-> Systems:
+\begin{itemize}
+\item Dataset collection
+\item Audio-video systems for monitoring
+\item On-board algorithms: Detection, tracking
 \end{itemize}
 \end{itemize}
 \end{frame}
+
 
 \begin{frame}
 \frametitle{The machine learning}
 \begin{itemize}
 \item<2-> Machine learning teching for bird image identification
 \item<3-> Bird classification: techniques can be adapted for birdcalls
-\item<4-> Production mechanims are different, but have similarities (eg. formant
+\item<4-> Production mechanisms are different, but have similarities (eg. formant
 structure)
 \item<5-> Existing techniques include:
 \begin{itemize}
@@ -299,9 +334,10 @@ Overall & 15.0 & 8.0 & 2.0 & \textbf{23.0} \\
 
 
 \begin{frame}
-\frametitle{Future plans}
+\frametitle{Future plans: Further funding}
 \begin{itemize}
-\item \textbf{Further funding:} Proposal to SERB (ready for submission)
+\item \textbf{Proposal to SERB (ready for submission)}:
+\item \textbf{Proposal planned:} Camera and acoustic sensor networks for a local area (IIT Mandi campus)
 \end{itemize}
 \end{frame}
 
