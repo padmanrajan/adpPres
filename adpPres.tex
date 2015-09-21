@@ -122,7 +122,7 @@ data
 \item<2-> Birds provide crucial ecosystem services: pollination, seed dispersal,
 insectivory
 \item<3-> Avian diversity: good indicator of ecosystem health in a local area
-\item<4-> Automatic and semi-automatic sensing devices can be utilised
+\item<4-> Automatic and semi-automatic sensing devices can be utilized
 \item<5-> Large volume of data captured by these devices
 \item<6-> Algorithms to analyse this data would be useful to ecologists
 \item<7-> Our campus location in the lower Himalays: sensitive ecosystem
@@ -137,7 +137,7 @@ insectivory
 \item<3-> Acoustics:
 	\begin{itemize}
 	\item<4-> Complex acoustic environment where recordings are made
-	\item<5-> Overlapping vocalisations, intra-species call variability
+	\item<5-> Overlapping vocalizations, intra-species call variability
 	\item<7-> Background sounds (other animals, human-made sounds, river etc.)
 	\end{itemize}
 \item<8-> Image/video 
@@ -158,8 +158,8 @@ insectivory
 	\item<17-> Dynamic kernels for bird data from different modalities
 	\item<18-> Fusion of modalities
 	\begin{itemize}
-	    \item<19-> Combining the representations from aoustic and image/video modes
-	    \item<20-> Combining the decicions from the classifiers for the representations from aoustic and image/video modes
+	    \item<19-> Combining the representations from acoustic and image/video modes
+	    \item<20-> Combining the decisions from the classifiers for the representations from acoustic and image/video modes
 	\end{itemize}
 	\item<21-> Bird indexing and retrieval
 	\end{itemize}
@@ -168,26 +168,10 @@ insectivory
 
 
 \begin{frame}
-\frametitle{The acoustics}
-\vspace{-1cm}
-Automatic analysis of birdcalls: fairly active research area\\
-\vspace{0.3cm}
-\pause
-Data acquisition: rugged, field-deployable recorders \\
-eg.~Song Meter SM3 recorder from Wildlife Acoustics Inc, USA.
-\begin{wrapfigure}{r}{0.3\textwidth}
-	\centering
-	\only<2>{\includegraphics[width=0.3\textwidth]{figures/songMeter.png}}
-	%\caption{\small{Song Meter SM3 recorder}}
-\end{wrapfigure}
-\end{frame}
-
-
-\begin{frame}
 \frametitle{The acoustics (cont'd)}
 \begin{itemize}
 \item<2-> Processing of human speech: techniques can be adapted for birdcalls
-\item<3-> Production mechanims are different, but have similarities (eg. formant
+\item<3-> Production mechanisms are different, but have similarities (eg. formant
 structure)
 \item<4-> Existing techniques include:
 \begin{itemize}
@@ -219,7 +203,7 @@ sounds before classification:
 	\item<5-> Project $\mathbf{x}$ into a subspace of background sounds, and remove this
 	component from $\mathbf{x}$
 \end{itemize}
-\item <6-> Fixed-length representations: utilised in kernel functions for
+\item <6-> Fixed-length representations: utilized in kernel functions for
 support vector machines
 \end{itemize}
 \end{frame}
@@ -235,7 +219,6 @@ support vector machines
 \end{itemize}
 \end{frame}
 
-
 \begin{frame}
 \footnotesize
 \frametitle{The visual: Existing work}
@@ -243,24 +226,26 @@ support vector machines
 	\item<2-> Fine-grained classification 
 	\begin{itemize}
 	\footnotesize
-	\item H. Tyagi et. al., ``Automatic identification of bird calls using spectral 
-	ensemble average voice prints'', Proc. EUSIPCO, 2006,
-	\item M. Graciarena et. al., ``Acoustic front-end optimization for bird species recognition'', 
-	Proc. ICASSP, 2010, 
-	\item M. Graciarena et.al., ``Bird species recognition combining acoustic and sequence modeling'', 
-	Proc. ICASSP, 2011, 
+	\item P. Welinder et. al., ``Caltech-UCSD Birds 200'',  CNS-TR-2010-001. 2010.
+	\item T. Berg and P. Belhumeur, ``POOF: Part-based one-vs-one features for fine-Grained categorization, face verification, and attribute estimation'', CVPR 2013.
+	\item B. Yao et. al., ``A codebook-free and annotation-free approach for fine-grained image categorization'', CVPR 2012.
+	\item L. Xie et. al., ``Hierarchical part matching for fine-grained visual categorization'', ICCV 2013.
 	\end{itemize}	
-	\item<3-> Visual guidance: 
-	\item<4-> Detection, Segmentation
-	\begin{itemize}
-	\footnotesize
-	\item H. Tyagi et. al., ``Automatic identification of bird calls using spectral 
-	ensemble average voice prints'', Proc. EUSIPCO, 2006,
-	\item M. Graciarena et. al., ``Acoustic front-end optimization for bird species recognition'', 
-	Proc. ICASSP, 2010, 
-	\item M. Graciarena et.al., ``Bird species recognition combining acoustic and sequence modeling'', 
-	Proc. ICASSP, 2011, 
-	\end{itemize}
+	\begin{figure}
+	\begin{tabular}{c c c}
+	\only<3->{\includegraphics[height=2cm]{figures/collage.png}&
+	\includegraphics[height=1cm]{figures/bird_points.png}&
+	\includegraphics[height=1cm]{figures/bird_templates.png}}
+	\end{tabular}
+	\end{figure}
+	\item<4-> Visual guidance: T. Berg and P. Belhumeur, ``How do you tell a blackbird from a crow,'' ICCV 2013.
+	\item<5-> Detection: D. Song and Y. Xu, ``A monocular vision-based low false negative filter for assisting the search for rare bird species using a probable observation data set-based EKF method'', Trans. Image Processing, 2010.	
+\begin{figure}
+\begin{tabular}{c c}
+\only<6->{\includegraphics[height=1.5cm]{figures/cam.png}&
+\includegraphics[height=1.5cm]{figures/detect.png}}
+\end{tabular}
+\end{figure}
 \end{itemize}
 \end{frame}
 
@@ -288,13 +273,35 @@ support vector machines
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{Example on-field system components}
+\vspace{-1cm}
+%Automatic analysis of birdcalls: fairly active research area\\
+\vspace{0.3cm}
+%\pause
+\begin{itemize}
+\item Data acquisition (audio): rugged, field-deployable recorders \\
+e.g.~Song Meter SM3 recorder from Wildlife Acoustics Inc, USA. \\
+\item Data acquisition (video): Network cameras \\
+e.g.~Panasonic WV-SP302\\
+\item Processing: Raspberry Pi, Beagle Bone 
+\end{itemize}
+\begin{figure}
+	\begin{tabular}{c c c}
+	\includegraphics[height=3cm]{figures/songMeter.png}&
+	\includegraphics[height=2cm]{figures/pan_cam.png}&
+	\includegraphics[height=2cm]{figures/rasp.jpg}
+	\end{tabular}
+	\end{figure}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{The machine learning: Tasks}
 \begin{itemize}
-\item<2-> Bird call identification using fixed length and varying length accoustic features 
+\item<2-> Bird call identification using fixed length and varying length acoustic features 
 \item<3-> Bird classification from images and videos
-\item<4-> Bird call indexing and retreval
+\item<4-> Bird call indexing and retrieval
 \item<5-> Bird image and video indexing and retrieval
 \item<6-> Combining different modalities for classification, indexing and retrieval tasks
 \end{itemize}
@@ -344,7 +351,7 @@ support vector machines
 \begin{frame}
 \frametitle{The machine learning: Multimodal classification and retrieval}
 \begin{itemize}
-\item<2-> Classfication and retrieval of birds by combining the ques from bird calls and bird images \& videos
+\item<2-> Classfication and retrieval of birds by combining the cues from bird calls and bird images \& videos
 \begin{itemize}
       \item Early fusion: Combining the acoustic, image and video features
       \item Late fusion: Combining the decisions from the different classifiers built for bird calls, bird images and bird videos
