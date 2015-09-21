@@ -1,1 +1,10 @@
-adpPres.toc
+adpPres.pdf
+*.out
+*.log
+*.aux
+*.toc
+*.snm
+*.nav
+*.swp
+.gitignore
+
