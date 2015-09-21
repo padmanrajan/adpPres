@@ -124,8 +124,8 @@ insectivory
 \item<3-> Avian diversity: good indicator of ecosystem health in a local area
 \item<4-> Automatic and semi-automatic sensing devices can be utilized
 \item<5-> Large volume of data captured by these devices
-\item<6-> Algorithms to analyse this data would be useful to ecologists
-\item<7-> Our campus location in the lower Himalays: sensitive ecosystem
+\item<6-> Algorithms to analyze this data would be useful to ecologists
+\item<7-> Our campus location in the lower Himalayas: sensitive ecosystem
 \item<8-> Proposed system can be used for long-term ecological monitoring
 \end{itemize}
 \end{frame}
@@ -176,7 +176,7 @@ structure)
 \item<4-> Existing techniques include:
 \begin{itemize}
 	\item spectral representations \footnote{
-	H. Tyagi et. al., ``Automatic identification of bird calls using spectral 
+	H. Tyagi et. al., ``Automatic identification of birdcalls using spectral 
 	ensemble average voice prints'', Proc. EUSIPCO, 2006},
 	\item Mel frequency cepstra \footnote{M. Graciarena et. al., 
 	``Acoustic front-end optimization for bird species recognition'', 
@@ -256,7 +256,7 @@ support vector machines (SVMs)
 \begin{frame}
 \frametitle{The visual: some possible directions}
 \begin{itemize}
-\item<2-> Features and frameworks: 
+\item<2-> Features: 
 \begin{itemize}
 \item Patch-based features: review, feature selection, part identification
 \item Body-part features: local appearance and geometric relationships
@@ -266,7 +266,7 @@ support vector machines (SVMs)
 \begin{itemize}
 \item Sparse representation: feature selection, classification
 \item Markov Random Fields: segmentation, pose estimation
-\item Hierarchical classification 
+\item Hierarchical classification and visual guidance
 \end{itemize}
 \item<4-> Systems:
 \begin{itemize}
@@ -306,9 +306,9 @@ e.g.~Panasonic WV-SP302\\
 \begin{frame}
 \frametitle{The machine learning: tasks}
 \begin{itemize}
-\item<2-> Bird call identification using fixed-length and varying-length acoustic features 
+\item<2-> Birdcall identification 
 \item<3-> Bird classification from images and videos
-\item<4-> Bird call indexing and retrieval
+\item<4-> Birdcall indexing and retrieval
 \item<5-> Bird image and video indexing and retrieval
 \item<6-> Combining different modalities for classification, indexing and retrieval tasks
 \end{itemize}
@@ -317,8 +317,8 @@ e.g.~Panasonic WV-SP302\\
 \begin{frame}
 \frametitle{The machine learning: bird classification}
 \begin{itemize}
-\item<2-> Classification of birds using SVMs from bird calls and bird images \& videos
-\item<3-> The representations for bird call are either fixed-length
+\item<2-> Classification of birds using SVMs from birdcalls and bird images \& videos
+\item<3-> The representations for birdcall are either fixed-length
 representation or varying-length representation
 \item<4-> Varying-length representation are either sets of local feature vectors or sequences of local feature vectors
 \item<5-> Dynamic kernel based SVMs for varying-length representation
@@ -331,43 +331,65 @@ representation or varying-length representation
 \item<2-> Some of the dynamic kernels are:
 \begin{itemize}
 	\item GMM-based intermediate matching kernel \footnote{
-	A. D. Dileep et. al., "GMM-Based intermediate matching kernel for
-	classification of varying length patterns of long duration speech using SVMs," in IEEE TNNLS, Aug. 2014},
-	\item HMM-based intermediate matching kernel \footnote{A. D. Dileep et. al., “HMM-based intermediate matching kernel for classification of sequential patterns of speech using SVMs,” in IEEE TASLP, Dec. 2013}, 
-	\item Histogram intersection kernel \footnote{J. C. van Gemert et. al., “Visual word ambiguity,” IEEE TPAMI, July 2010}, 
-	\item Spacial pyramid match kernel \footnote{S. Lazebnik et. al., “Beyond bags of features:Spatial pyramid matching for recognizing natural scene categories,” in Proceedings of CVPR 2006, June 2006}
-\end{itemize}
+	A. D. Dileep et. al., ``GMM-Based intermediate matching kernel for classification of varying length patterns of long duration speech using SVMs'', in IEEE TNNLS, Aug. 2014},
+	\item HMM-based intermediate matching kernel \footnote{A. D. Dileep et. al., ``HMM-based intermediate matching kernel for classification of sequential patterns of speech using SVMs'', in IEEE TASLP, Dec. 2013}, 
+	\item Histogram intersection kernel \footnote{J. C. van Gemert et. al., ``Visual word ambiguity'', in IEEE TPAMI, July 2010} 
+	\item Spatial pyramid match kernel \footnote{S. Lazebnik et. al., ``Beyond bags of features: Spatial pyramid matching for recognizing natural scene categories'', in Proceedings of CVPR, June 2006} \end{itemize}
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{The machine learning: bird indexing and retrieval}
 \begin{itemize}
-\item<2-> Matching and retrieval of birds using bird calls and bird images \& videos
+\item<2-> Matching and retrieval of birds using birdcalls and bird images \& videos
 \begin{itemize}
       \item Query-by-example (QBE) based retrieval\footnote{
-	A. Marakakis et. al., “Probabilistic relevance feedback approach for content-based image retrieval based on Gaussian mixture models,” in IET Image Processing, Feb. 2009}
+	A. Marakakis et. al., ``Probabilistic relevance feedback approach for content-based image retrieval based on Gaussian mixture models'', in IET Image Processing, Feb. 2009}
       \item Query-by-semantics (QBS) based retrieval\footnote{
-	G. Carneiro et. al., “Supervised learning of semantic classes for image annotation and retrieval,” in IEEE TPAMI, March 2007}
+	G. Carneiro et. al., ``Supervised learning of semantic classes for image annotation and retrieval'', in IEEE TPAMI, March 2007}
       \item Query-by-semantic example (QBSE) based retrieval\footnote{
-	N. Rasiwasia et. al., “Bridging the gap: Query by semantic example,” in IEEE Transactions on Multimedia, Aug. 2009}
+	N. Rasiwasia et. al., ``Bridging the gap: Query by semantic example'' in IEEE Transactions on Multimedia, Aug. 2009}
 \end{itemize}
 \item<3-> Matching and retrieval of birds using kernel methods\footnote{
-	T. Veena, “Image classification, matching and annotation using kernel methods for content based image retrieval for scene images,” Ph.D. Thesis, Dept. of CSE, IIT Madras, June 2014.}   
+	T. Veena, ``Image classification, matching and annotation using kernel methods for content based image retrieval for scene images'', Ph.D. Thesis, Dept. of CSE, IIT Madras, June 2014}   
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{The machine learning: multimodal classification and retrieval}
 \begin{itemize}
-\item<2-> Classfication and retrieval of birds by combining the cues from bird calls and bird images \& videos
+\item<2-> Classification and retrieval of birds by combining the cues from birdcalls and bird images \& videos
 \begin{itemize}
       \item Early fusion: Combining the acoustic, image and video features
-      \item Late fusion: Combining the decisions from the different classifiers built for bird calls, bird images and bird videos
+      \item Late fusion: Combining the decisions from the different classifiers built for birdcalls, bird images and bird videos
  \end{itemize}
 \item<3-> Feature selection and combining using multiple kernel learning
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+\frametitle{Future plans: further funding}
+\begin{itemize}
+\item \textbf{Proposal to SERB:} 
+	\begin{itemize}
+	\item \textit{Automatic analysis of avian acoustics}. 
+	\item In collaboration with IIT Madras, NCBS and CDAC. 
+	\item PI from IIT Mandi: Padmanabhan Rajan.
+	\item Value: Rs 50 lakhs. 
+	\item \textbf{Ready for submission.}
+	\end{itemize}
+
+\item \textbf{Proposal planned:} \\Camera and acoustic sensor networks for a local area (IIT Mandi)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+\begin{center}
+\Large{Thank you for your attention.}
+\end{center}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Budget and other details}
@@ -392,28 +414,6 @@ Overall & 15.0 & 8.0 & 2.0 & \textbf{23.0} \\
 \end{table}
 \end{frame}
 
-
-\begin{frame}
-\frametitle{Future plans: further funding}
-\begin{itemize}
-\item \textbf{Proposal to SERB:} 
-	\begin{itemize}
-	\item \textit{Automatic analysis of avian acoustics}. 
-	\item In collaboration with IIT Madras, NCBS and CDAC. 
-	\item Value: Rs 50 lakhs. 
-	\item \textbf{Ready for submission.}
-	\end{itemize}
-
-\item \textbf{Proposal planned:} Camera and acoustic sensor networks for 
-a local area (IIT Mandi campus)
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{}
-\Large{Thank you for your attention.}
-\end{frame}
 
 \begin{frame}
 \frametitle{Equipment budget}
