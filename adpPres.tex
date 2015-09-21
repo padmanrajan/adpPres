@@ -107,7 +107,7 @@ The budget and other details\\
 \begin{frame}
 \frametitle{The objective}
 \begin{itemize}
-\item<2-> Develop algorithms for automatic analysis of avain biodiversity
+\item<2-> Develop algorithms for automatic analysis of avian biodiversity
 \item<3-> Combine information from acoustic and visual data streams
 \item<4-> Sensors: microphones, cameras
 \item<5-> Apply signal processing and machine-learning techniques to collected
@@ -138,13 +138,13 @@ insectivory
 	\begin{itemize}
 	\item<4-> Complex acoustic environment where recordings are made
 	\item<5-> Overlapping vocalizations, intra-species call variability
-	\item<7-> Background sounds (other animals, human-made sounds, river etc.)
+	\item<6-> Background sounds (other animals, human-made sounds, river etc.)
 	\end{itemize}
-\item<8-> Image/video 
+\item<8-> Image/video: 
 	\begin{itemize}
 	\item<9-> Complex visual environment, visual background clutter
 	\item<10-> Overlapping inter-class visual appearances, local variations  
-	\item<11-> Intra-class variations: Robustness to changes in pose, motion, light conditions.
+	\item<11-> Intra-class variations: robustness to changes in pose, motion, light conditions.
 	\end{itemize}
 % \item<12-> Fusion of modalities
 % 	\begin{itemize}
@@ -152,16 +152,17 @@ insectivory
 % 	\item<14-> Complementary representations from different modalities
 % 	\item<15-> Correlating sound and videos
 % 	\end{itemize}
-\item<15-> Machine-learning
+\item<12-> Machine-learning:
 	\begin{itemize}
-	\item<16-> Classification using Fixed-length representations and varying length representations
-	\item<17-> Dynamic kernels for bird data from different modalities
-	\item<18-> Fusion of modalities
+	\item<13-> Classification using fixed-length representations 
+	and varying length representations
+	\item<14-> Dynamic kernels for bird data from different modalities
+	\item<15-> Fusion of modalities
 	\begin{itemize}
-	    \item<19-> Combining the representations from acoustic and image/video modes
-	    \item<20-> Combining the decisions from the classifiers for the representations from acoustic and image/video modes
+	    \item<16-> Combining the representations from acoustic and image/video modes
+	    \item<17-> Combining the decisions from the classifiers for the representations from acoustic and image/video modes
 	\end{itemize}
-	\item<21-> Bird indexing and retrieval
+	\item<18-> Bird indexing and retrieval
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -204,32 +205,38 @@ sounds before classification:
 	component from $\mathbf{x}$
 \end{itemize}
 \item <6-> Fixed-length representations: utilized in kernel functions for
-support vector machines
+support vector machines (SVMs)
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}
-\frametitle{The visual: Research areas}
+\frametitle{The visual: research areas}
 \begin{itemize}
 \item<2-> Fine-grained classification (of birds): Relatively recent research area ($\geq$ 2010)
-\item<3-> Detection, segmentation and tracking of birds (relatively unexplored): \\Adapting general object detection, segmentation and tracking methods.
-\item<4-> Learning visual guidance: Inverse problem to classification \\$\Rightarrow$ Given the classes, find the discriminative features
-\item<5-> Sound source localization (active area in general domains): \\Challenges for birds: less visual motion, background sounds
+\item<3-> Detection, segmentation and tracking of birds (relatively unexplored): 
+\\adapting general object detection, segmentation and tracking methods
+\item<4-> Learning visual guidance: inverse problem to classification \\$\Rightarrow$ Given the classes, find the discriminative features
+\item<5-> Sound source localization (active area in general domains): 
+\\challenges for birds: less visual motion, background sounds
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \footnotesize
-\frametitle{The visual: Existing work}
+\frametitle{The visual: existing work}
 \begin{itemize}
 	\item<2-> Fine-grained classification 
 	\begin{itemize}
 	\footnotesize
 	\item P. Welinder et. al., ``Caltech-UCSD Birds 200'',  CNS-TR-2010-001. 2010.
-	\item T. Berg and P. Belhumeur, ``POOF: Part-based one-vs-one features for fine-Grained categorization, face verification, and attribute estimation'', CVPR 2013.
-	\item B. Yao et. al., ``A codebook-free and annotation-free approach for fine-grained image categorization'', CVPR 2012.
-	\item L. Xie et. al., ``Hierarchical part matching for fine-grained visual categorization'', ICCV 2013.
+	\item T. Berg and P. Belhumeur, ``POOF: Part-based one-vs-one features for 
+	fine-grained categorization, face verification, and attribute estimation'',
+	CVPR 2013.
+	\item B. Yao et. al., ``A codebook-free and annotation-free approach for
+	fine-grained image categorization'', CVPR 2012.
+	\item L. Xie et. al., ``Hierarchical part matching for fine-grained visual
+	categorization'', ICCV 2013.
 	\end{itemize}	
 	\begin{figure}
 	\begin{tabular}{c c c}
@@ -238,8 +245,12 @@ support vector machines
 	\includegraphics[height=1cm]{figures/bird_templates.png}}
 	\end{tabular}
 	\end{figure}
-	\item<4-> Visual guidance: T. Berg and P. Belhumeur, ``How do you tell a blackbird from a crow,'' ICCV 2013.
-	\item<5-> Detection: D. Song and Y. Xu, ``A monocular vision-based low false negative filter for assisting the search for rare bird species using a probable observation data set-based EKF method'', Trans. Image Processing, 2010.	
+	\item<4-> Visual guidance: T. Berg and P. Belhumeur, ``How do you tell a
+	blackbird from a crow?'', ICCV 2013.
+	\item<5-> Detection: D. Song and Y. Xu, ``A monocular vision-based low false
+	negative filter for assisting the search for rare bird species using a
+	probable observation data set-based EKF method'', IEEE Trans. 
+	Image Processing, 2010.	
 \begin{figure}
 \begin{tabular}{c c}
 \only<6->{\includegraphics[height=1.5cm]{figures/cam.png}&
@@ -255,20 +266,20 @@ support vector machines
 \item<2-> Features and frameworks: 
 \begin{itemize}
 \item Patch-based features 
-\item Body-part features: Appearance and Geometric relationships
-\item Feature learning: Deep neural networks, Discriminative features
+\item Body-part features: appearance and geometric relationships
+\item Feature learning: deep neural networks, discriminative features
 \end{itemize}
 \item<3-> Frameworks:
 \begin{itemize}
 \item Sparse representation
-\item Markov Random Fields
+\item Markov random fields
 \item Hierarchical classification 
 \end{itemize}
 \item<4-> Systems:
 \begin{itemize}
 \item Dataset collection
 \item Audio-video systems for monitoring
-\item On-board algorithms: Detection, tracking
+\item On-board algorithms: detection, tracking
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -297,7 +308,7 @@ e.g.~Panasonic WV-SP302\\
 
 
 \begin{frame}
-\frametitle{The machine learning: Tasks}
+\frametitle{The machine learning: tasks}
 \begin{itemize}
 \item<2-> Bird call identification using fixed length and varying length acoustic features 
 \item<3-> Bird classification from images and videos
@@ -310,15 +321,16 @@ e.g.~Panasonic WV-SP302\\
 \begin{frame}
 \frametitle{The machine learning: Bird classification}
 \begin{itemize}
-\item<2-> Classification of birds using support vector machines (SVMs) from bird calls and bird images \& videos
-\item<3-> The representations for bird call are either fixed length representation or varying length representation
-\item<4-> Varying length representation are either sets of local feature vectors or sequences of local feature vectors
-\item<5-> Dynamic kernel based SVMs for varying length representation
+\item<2-> Classification of birds using SVMs from bird calls and bird images \& videos
+\item<3-> The representations for bird call are either fixed-length
+representation or varying-length representation
+\item<4-> Varying-length representation are either sets of local feature vectors or sequences of local feature vectors
+\item<5-> Dynamic kernel based SVMs for varying-length representation
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{The machine learning: Bird classification (cont'd)}
+\frametitle{The machine learning: bird classification (cont'd)}
 \begin{itemize}
 \item<2-> Some of the dynamic kernels are:
 \begin{itemize}
@@ -366,7 +378,7 @@ e.g.~Panasonic WV-SP302\\
 \begin{table}[th]
 \centering
 \caption{Projected expenses in lakhs INR.}
-\begin{tabular}{|c|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|c|}
 \hline
 Items & Year 1 & Year 2 & Year 3 & Total\\
 \hline
@@ -385,10 +397,18 @@ Overall & 15.0 & 8.0 & 2.0 & \textbf{23.0} \\
 
 
 \begin{frame}
-\frametitle{Future plans: Further funding}
+\frametitle{Future plans: further funding}
 \begin{itemize}
-\item \textbf{Proposal to SERB (ready for submission)}:
-\item \textbf{Proposal planned:} Camera and acoustic sensor networks for a local area (IIT Mandi campus)
+\item \textbf{Proposal to SERB:} 
+	\begin{itemize}
+	\item \textit{Automatic analysis of avian acoustics}. 
+	\item In collaboration with IIT Madras, NCBS and CDAC. 
+	\item Value: Rs 50 lakhs. 
+	\item \textbf{Ready for submission.}
+	\end{itemize}
+
+\item \textbf{Proposal planned:} Camera and acoustic sensor networks for 
+a local area (IIT Mandi campus)
 \end{itemize}
 \end{frame}
 
@@ -397,6 +417,34 @@ Overall & 15.0 & 8.0 & 2.0 & \textbf{23.0} \\
 \frametitle{}
 \Large{Thank you for your attention.}
 \end{frame}
+
+\begin{frame}
+\frametitle{Equipment budget}
+
+\begin{table}[th]
+\centering
+\caption{Equipment budget in thousands INR.}
+\begin{tabular}{|l|c|c|c|}
+\hline
+Item & Unit cost & Qty. & Total\\
+\hline
+Bioacoustic recorder & 50 & 6 & 300 \\
+Network camera & 30 & 5 & 150  \\
+Recorder accessories & 15 & 8 & 120 \\
+DSLR camera and lens & 100 & 1 & 100\\
+Consumables & 50 & 1 & 50\\
+Processing hardware & 8 & 5 & 40 \\
+Network access points & 3 & 5 & 15\\
+\hline
+Total &  & & \textbf{775} \\
+\hline
+\end{tabular}
+\label{tab:equipFunding}
+\end{table}
+\end{frame}
+
+
+
 
 
 \end{document}
