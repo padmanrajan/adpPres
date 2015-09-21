@@ -212,12 +212,10 @@ support vector machines (SVMs)
 \begin{frame}
 \frametitle{The visual: research areas}
 \begin{itemize}
-\item<2-> Fine-grained classification (of birds): Relatively recent research area ($\geq$ 2010)
-\item<3-> Detection, segmentation and tracking of birds (relatively unexplored): 
-\\adapting general object detection, segmentation and tracking methods
-\item<4-> Learning visual guidance: inverse problem to classification \\$\Rightarrow$ Given the classes, find the discriminative features
-\item<5-> Sound source localization (active area in general domains): 
-\\challenges for birds: less visual motion, background sounds
+\item<2-> Fine-grained classification (of birds): relatively recent ($\geq$ 2010)
+\item<3-> Learning visual guidance: inverse problem to classification \\$\Rightarrow$ Given the classes, find the discriminative features
+\item<4-> Detection, segmentation and tracking of birds: \\Adapting general object detection, segmentation and tracking methods in computer vision.
+\item<5-> Sound source localization in videos: \\Adapting existing work in non-specific domains: \\Challenges for birds: less visual motion, background sounds
 \end{itemize}
 \end{frame}
 
@@ -229,13 +227,9 @@ support vector machines (SVMs)
 	\begin{itemize}
 	\footnotesize
 	\item P. Welinder et. al., ``Caltech-UCSD Birds 200'',  CNS-TR-2010-001. 2010.
-	\item T. Berg and P. Belhumeur, ``POOF: Part-based one-vs-one features for 
-	fine-grained categorization, face verification, and attribute estimation'',
-	CVPR 2013.
-	\item B. Yao et. al., ``A codebook-free and annotation-free approach for
-	fine-grained image categorization'', CVPR 2012.
-	\item L. Xie et. al., ``Hierarchical part matching for fine-grained visual
-	categorization'', ICCV 2013.
+	\item T. Berg and P. Belhumeur, ``POOF: Part-based one-vs-one features for fine-Grained categorization, face verification, and attribute estimation'', CVPR 2013.
+	\item L. Xie et. al., ``Hierarchical part matching for fine-grained visual categorization'', ICCV 2013.
+	\item B. Yao et. al., ``A codebook-free and annotation-free approach for fine-grained image categorization'', CVPR 2012.	
 	\end{itemize}	
 	\begin{figure}
 	\begin{tabular}{c c c}
@@ -260,18 +254,18 @@ support vector machines (SVMs)
 \end{frame}
 
 \begin{frame}
-\frametitle{The visual: possible directions}
+\frametitle{The visual: some possible directions}
 \begin{itemize}
 \item<2-> Features and frameworks: 
 \begin{itemize}
-\item Patch-based features 
-\item Body-part features: appearance and geometric relationships
-\item Feature learning: deep neural networks, discriminative features
+\item Patch-based features: review, feature selection, part identification
+\item Body-part features: local appearance and geometric relationships
+\item Feature learning: deep neural networks
 \end{itemize}
 \item<3-> Frameworks:
 \begin{itemize}
-\item Sparse representation
-\item Markov random fields
+\item Sparse representation: feature selection, classification
+\item Markov Random Fields: segmentation, pose estimation
 \item Hierarchical classification 
 \end{itemize}
 \item<4-> Systems:
@@ -279,9 +273,12 @@ support vector machines (SVMs)
 \item Dataset collection
 \item Audio-video systems for monitoring
 \item On-board algorithms: detection, tracking
+\item Online bird classification portal (image and sound)
 \end{itemize}
 \end{itemize}
 \end{frame}
+
+
 
 \begin{frame}
 \frametitle{Example on-field system components}
