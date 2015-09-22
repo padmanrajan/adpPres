@@ -112,7 +112,8 @@ The budget and other details\\
 \item<4-> Sensors: microphones, cameras
 \item<5-> Apply signal processing and machine-learning techniques to collected
 data
-\item<6-> Tasks: Species identification, species detection
+\item<6-> Tasks: species identification, species detection, information
+retrieval
 \end{itemize}
 \end{frame}
 
@@ -140,11 +141,11 @@ insectivory
 	\item<5-> Overlapping vocalizations, intra-species call variability
 	\item<6-> Background sounds (other animals, human-made sounds, river etc.)
 	\end{itemize}
-\item<8-> Image/video: 
+\item<7-> Image/video: 
 	\begin{itemize}
-	\item<9-> Complex visual environment, visual background clutter
-	\item<10-> Overlapping inter-class visual appearances, local variations  
-	\item<11-> Intra-class variations: robustness to changes in pose, motion, light conditions.
+	\item<8-> Complex visual environment, visual background clutter
+	\item<9-> Overlapping inter-class visual appearances, local variations  
+	\item<10-> Intra-class variations: robustness to changes in pose, motion, light conditions
 	\end{itemize}
 % \item<12-> Fusion of modalities
 % 	\begin{itemize}
@@ -152,16 +153,16 @@ insectivory
 % 	\item<14-> Complementary representations from different modalities
 % 	\item<15-> Correlating sound and videos
 % 	\end{itemize}
-\item<12-> Machine-learning:
+\item<11-> Machine-learning:
 	\begin{itemize}
-	\item<13-> Fixed-length representations and varying-length representations
-	\item<14-> Dynamic kernels for bird data from different modalities
-	\item<15-> Fusion of modalities
+	\item<12-> Fixed-length representations and varying-length representations
+	\item<13-> Dynamic kernels for bird data from different modalities
+	\item<14-> Fusion of modalities
 	\begin{itemize}
-	    \item<16-> Combining the representations from acoustic and image/video modes
-	    \item<17-> Combining the decisions from the classifiers for the representations from acoustic and image/video modes
+	    \item<15-> Combining the representations from acoustic and image/video modes
+	    \item<16-> Combining the decisions from the classifiers for the representations from acoustic and image/video modes
 	\end{itemize}
-	\item<18-> Bird indexing and retrieval
+	\item<17-> Bird indexing and retrieval
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -359,7 +360,8 @@ representation or varying-length representation
 \begin{frame}
 \frametitle{The machine learning: multimodal classification and retrieval}
 \begin{itemize}
-\item<2-> Classification and retrieval of birds by combining the cues from birdcalls and bird images \& videos
+\item<2-> Classification and retrieval of birds by combining cues from
+birdcalls, bird images and videos
 \begin{itemize}
       \item Early fusion: Combining the acoustic, image and video features
       \item Late fusion: Combining the decisions from the different classifiers built for birdcalls, bird images and bird videos
